@@ -54,6 +54,8 @@ const carouselElement = document.querySelector("div.carousel");
 console.log(carouselElement);
 
 
+let activeIndex = 4;
+
 images.forEach((image) => {
     console.log(image.image);
     carouselElement.innerHTML += 
@@ -62,4 +64,28 @@ images.forEach((image) => {
     </div>`;
 })
 
-document.querySelectorAll("div.carousel-item")[0].classList.add("active")
+document.querySelectorAll("div.carousel-item")[activeIndex].classList.add("active")
+
+const buttonTop = document.querySelector("div.button-top");
+
+buttonTop.addEventListener("click", function(){
+    if (activeIndex == 0) {
+        activeIndex = images.length - 1;
+    } else {
+        activeIndex = activeIndex -1;
+    }
+
+    document.querySelector("div.carousel-item.active").classList.remove("active");
+    document.querySelector("div.carousel-item")[activeIndex].classList.add("active");
+});
+
+
+const buttonBot = document.querySelector("div.button-bot");
+
+buttonBot.addEventListener("click", function(){
+    if (activeIndex == images.length - 1) {
+        activeIndex = 0;
+    } else {
+        activeIndex = activeIndex +1;
+    }
+}
