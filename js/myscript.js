@@ -56,4 +56,10 @@ console.log(carouselElement);
 
 images.forEach((image) => {
     console.log(image);
+    carouselElement.innerHTML += 
+    `<div class="carousel-item">
+    <img src="./img/${image}" alt="Carousel slide">
+    </div>`;
 })
+
+document.querySelectorAll("div.carousel-item")[0].classList.add("active")
