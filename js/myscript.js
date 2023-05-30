@@ -76,7 +76,7 @@ buttonTop.addEventListener("click", function(){
     }
 
     document.querySelector("div.carousel-item.active").classList.remove("active");
-    document.querySelector("div.carousel-item")[activeIndex].classList.add("active");
+    document.querySelector("div.carousel-item").classList.add("active");
 });
 
 
@@ -88,4 +88,7 @@ buttonBot.addEventListener("click", function(){
     } else {
         activeIndex = activeIndex +1;
     }
+
+    document.querySelector("div.carousel-item.active").classList.remove("active");
+    document.querySelector("div.carousel-item").classList.add("active");
 })
