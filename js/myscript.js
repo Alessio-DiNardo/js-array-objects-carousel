@@ -88,4 +88,4 @@ buttonBot.addEventListener("click", function(){
     } else {
         activeIndex = activeIndex +1;
     }
-}
+})
