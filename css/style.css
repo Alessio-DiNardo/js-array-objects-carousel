@@ -3,3 +3,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+main{
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.carousel{
+    position: relative;
+}
+
+div.button-top,
+div.button-bot{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    display: flex;
+}
+
+div.button-top i,
+div.button-bot i{
+    margin: auto;
+}
+
+div.button-top{
+    top: 1rem
+}
+
+div.button-bot{
+    bottom: 1rem;
+}
+
+div.carousel .carousel-item{
+    display: none;
+}
+
+div.carousel .carousel-item.active{
+    display: block;
+}
