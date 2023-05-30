@@ -18,9 +18,9 @@
 // Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 
 
-{/* <div class="carousel-item">
+/* <div class="carousel-item">
     <img src="" alt="">
-</div> */}
+</div> */
 
 
 
@@ -55,9 +55,9 @@ console.log(carouselElement);
 
 
 images.forEach((image) => {
-    console.log(image);
+    console.log(image.image);
     carouselElement.innerHTML += 
-    `<div class="carousel-item">
+    `<div class="">
     <img src="./img/${image.image}" alt="Carousel slide">
     </div>`;
 })
